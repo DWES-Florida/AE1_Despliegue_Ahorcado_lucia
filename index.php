@@ -1,6 +1,6 @@
 <?php
 session_start();
-// Añadidas las 3 nuevas palabras al final del array
+// Array con las palabras originales y las nuevas añadidas por B
 $palabras = ['elefante', 'jirafa', 'hipopotamo', 'rinoceronte', 'cocodrilo', 'camello', 'chimpance', 'javascript', 'servidor', 'github'];
 
 if (!isset($_SESSION['palabra'])) {
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['letra'])) {
 <head>
     <meta charset="UTF-8">
     <title>Ahorcado</title>
-    <!-- Enlace al archivo CSS añadido por el Desarrollador A -->
+    <!-- Estilo añadido por el Desarrollador A -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['letra'])) {
     <p>Palabra secreta: <?php echo $_SESSION['letras_acertadas']; ?></p>
     <p>Vidas restantes: <?php echo $_SESSION['vidas']; ?></p>
     
-    <!-- Lógica de redirección a ganar.php y perder.php añadida por el Desarrollador B -->
+    <!-- Redirecciones añadidas por el Desarrollador B -->
     <?php if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']): ?>
         <script>window.location.href = 'ganar.php';</script>
     <?php elseif ($_SESSION['vidas'] <= 0): ?>
