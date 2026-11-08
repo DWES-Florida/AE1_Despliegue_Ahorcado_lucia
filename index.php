@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['letra'])) {
     <meta charset="UTF-8">
     <title>Ahorcado</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body> <!-- Corregido de "cuerpo" -->
     <h1>Juego del Ahorcado</h1>
